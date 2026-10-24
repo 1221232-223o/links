@@ -1,174 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orielf - Official Links</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-ambient"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    
+    <div class="container">
+        <!-- פרופיל -->
+        <div class="profile">
+            <div class="avatar-wrapper">
+                <div class="avatar-ring">
+                    <img src="https://files.kick.com/images/user/77347899/profile_image/conversion/906b37f8-0bac-4a22-acd8-a52ef131dc5d-fullsize.webp" alt="orielf" class="profile-img">
+                </div>
+            </div>
+            <h1>orielf</h1>
+        </div>
 
-body {
-    background-color: #0b0e14;
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow-x: hidden;
-}
+        <div class="divider">
+            <span>הקישורים שלי</span>
+        </div>
 
-.bg-ambient {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle at 50% 30%, rgba(20, 30, 60, 0.6), transparent 70%);
-    z-index: -2;
-}
+        <!-- גריד כפתורים -->
+        <div class="links-grid">
+            
+            <!-- Kick -->
+            <a href="https://kick.com/orielf" target="_blank" class="link-card kick">
+                <div class="card-content">
+                    <h2>Kick</h2>
+                    <p>שידורים חיים</p>
+                </div>
+                <div class="card-icon">
+                    <span class="kick-letter">K</span>
+                </div>
+            </a>
 
-.mouse-glow {
-    position: fixed;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(0, 150, 255, 0.15) 0%, transparent 70%);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: width 0.2s, height 0.2s;
-}
+            <!-- Discord -->
+            <a href="https://discord.gg/fxrfczwKy8" target="_blank" class="link-card discord">
+                <div class="card-content">
+                    <h2>Discord</h2>
+                    <p>לעדכונים על לייבים</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+            </a>
 
-.container {
-    width: 100%;
-    max-width: 480px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-}
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/" target="_blank" class="link-card tiktok">
+                <div class="card-content">
+                    <h2>TikTok</h2>
+                    <p>לערוץ הטיקטוק שלי</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </a>
 
-.avatar-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
+            <!-- Tips / Donations -->
+            <a href="https://botrix.live/k/orielf/tip" target="_blank" class="link-card tip">
+                <div class="card-content">
+                    <h2>תשלומים / Tip</h2>
+                    <p>תמיכה בערוץ</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+            </a>
 
-.avatar-ring {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(135deg, #53fc18, #5865f2);
-}
+        </div>
+    </div>
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: #1a1f2c;
-}
-
-.profile h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-}
-
-.badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    color: #8a99ad;
-    margin-bottom: 1.5rem;
-}
-
-.divider {
-    position: relative;
-    margin: 1.5rem 0;
-    text-align: center;
-}
-
-.divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 1;
-}
-
-.divider span {
-    position: relative;
-    background-color: #0b0e14;
-    padding: 0 10px;
-    font-size: 0.85rem;
-    color: #5f6e82;
-    z-index: 2;
-}
-
-.links-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.link-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.25rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.25s ease;
-    backdrop-filter: blur(10px);
-}
-
-.link-card:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.card-content {
-    text-align: right;
-}
-
-.card-content h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.card-content p {
-    font-size: 0.8rem;
-    color: #8a99ad;
-}
-
-.card-icon {
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-}
-
-.kick .kick-letter {
-    color: #53fc18;
-    font-weight: 900;
-    font-size: 1.3rem;
-}
-
-.discord .card-icon {
-    color: #5865f2;
-}
-
-.tiktok .card-icon {
-    color: #ff0050;
-}
-
-.tip .card-icon {
-    color: #2ecc71;
-}
+    <script>
+        const glow = document.getElementById('mouseGlow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>

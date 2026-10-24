@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orielf - Official Links</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-ambient"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    
+    <div class="container">
+        <!-- פרופיל -->
+        <div class="profile">
+            <div class="avatar-wrapper">
+                <div class="avatar-ring">
+                    <img src="https://files.kick.com/images/user/77347899/profile_image/conversion/906b37f8-0bac-4a22-acd8-a52ef131dc5d-fullsize.webp" alt="orielf" class="profile-img">
+                </div>
+            </div>
+            <h1>orielf</h1>
+            <div class="badge">• OFFICIAL LINKS •</div>
+        </div>
+
+        <div class="divider">
+            <span>הקישורים שלי</span>
+        </div>
+
+        <!-- גריד כפתורים -->
+        <div class="links-grid">
+            
+            <!-- Kick -->
+            <a href="https://kick.com/orielf" target="_blank" class="link-card kick">
+                <div class="card-content">
+                    <h2>Kick</h2>
+                    <p>שידורים חיים</p>
+                </div>
+                <div class="card-icon">
+                    <span class="kick-letter">K</span>
+                </div>
+            </a>
+
+            <!-- Discord -->
+            <a href="https://discord.gg/fxrfczwKy8" target="_blank" class="link-card discord">
+                <div class="card-icon">
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Discord</h2>
+                    <p>לעדכונים על לייבים</p>
+                </div>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@oshermontana1" target="_blank" class="link-card tiktok">
+                <div class="card-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <div class="card-content">
+                    <h2>TikTok</h2>
+                    <p>לערוץ הטיקטוק שלי</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        const glow = document.getElementById('mouseGlow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>

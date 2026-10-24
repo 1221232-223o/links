@@ -78,4 +78,10 @@
 
     <script>
         const glow = document.getElementById('mouseGlow');
-        window
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
